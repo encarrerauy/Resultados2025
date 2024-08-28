@@ -1,0 +1,56 @@
+a. Creación de la Base de Datos:
+Primero, vamos a crear la base de datos. Puedes hacerlo desde phpMyAdmin o utilizando una herramienta de administración de MySQL.
+
+CREATE DATABASE resultados_encarrera;
+
+b. Creación de la Tabla de Eventos:
+Esta tabla almacenará información sobre los eventos, incluyendo el nombre del evento y la fecha.
+
+CREATE TABLE eventos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_evento VARCHAR(255) NOT NULL,
+    fecha_evento DATE NOT NULL,
+    descripcion TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+c. Creación de la Tabla de Resultados:
+Esta tabla almacenará los resultados de cada corredor. Aquí incluimos los campos relevantes que mencionaste.
+
+CREATE TABLE resultados (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    evento_id INT NOT NULL,
+    numero INT NOT NULL,
+    nombre VARCHAR(255) NOT NULL,
+    pos_general INT,
+    pos_categoria INT,
+    modalidad VARCHAR(100),
+    categoria VARCHAR(100),
+    tiempo TIME,
+    sexo VARCHAR(10),
+    edad INT,
+    pos_modalidad INT,
+    velocidad_tb DECIMAL(5,2),
+    ritmo_tb VARCHAR(20),
+    FOREIGN KEY (evento_id) REFERENCES eventos(id)
+);
+
+
+BASE DE DATOS PRODUCCION
+
+encarrera_result25
+
+usuario: encarrera_result25
+
+
+pass: 5Oq=$kFPjrm^
+
+
+USUARIO APP:
+
+Fernando
+Klikowski$1
+
+Seba
+Encarrera$25

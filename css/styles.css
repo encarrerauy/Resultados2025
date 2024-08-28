@@ -1,0 +1,30 @@
+/* Estilos personalizados para el proyecto */
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    text-align: center;
+}
+
+.search-label {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .logo img {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .logo img {
+        max-width: 300px;
+    }
+}
